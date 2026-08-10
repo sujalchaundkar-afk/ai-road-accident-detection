@@ -4,20 +4,20 @@ ResQNet AI is an AI and IoT based emergency detection and response system design
 
 Key Features
 
-AI-based accident detection
-Emergency severity analysis
-Location identification
-Alert generation
-Emergency response dashboard
-Future IoT sensor integration
+1)AI-based accident detection
+2)Emergency severity analysis
+3)Location identification
+4)Alert generation
+5)Emergency response dashboard
+6)Future IoT sensor integration
 
 Technology
 
-HTML
-CSS
-JavaScript
-Python
-Flask
-AI/ML
-OpenCV
-GitHub
+1)HTML
+2)CSS
+3)JavaScript
+4)Python
+5)Flask
+6)AI/ML
+7)OpenCV
+8)GitHub
