@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>ResQNet AI - Accident Detection</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🚨 ResQNet AI</h1>
+
+        <p class="subtitle">
+            AI Powered Road Accident Detection & Emergency Response
+        </p>
+
+        <div class="card">
+
+            <h2>Accident Detection</h2>
+
+            <p>
+                Upload an image of a road scene to check for a possible accident.
+            </p>
+
+            <input type="file" id="imageInput" accept="image/*">
+
+            <div id="previewBox">
+                <img id="previewImage" src="" alt="Image Preview">
+            </div>
+
+            <button id="analyzeBtn">
+                Analyze Accident
+            </button>
+
+            <div id="loading">
+                Analyzing image...
+            </div>
+
+        </div>
+
+
+        <div class="result-card" id="resultCard">
+
+            <h2>Safety Report</h2>
+
+            <p>
+                <strong>Accident Status:</strong>
+                <span id="accidentStatus">-</span>
+            </p>
+
+            <p>
+                <strong>Severity:</strong>
+                <span id="severity">-</span>
+            </p>
+
+            <p>
+                <strong>Location:</strong>
+                <span id="location">-</span>
+            </p>
+
+            <p>
+                <strong>Emergency Response:</strong>
+                <span id="emergency">-</span>
+            </p>
+
+            <div class="message" id="message">
+            </div>
+
+        </div>
+
+
+        <div class="info">
+
+            <h2>How It Works</h2>
+
+            <div class="steps">
+
+                <div>
+                    <b>1. Upload</b>
+                    <p>Upload a road accident image.</p>
+                </div>
+
+                <div>
+                    <b>2. Analyze</b>
+                    <p>The system analyzes the uploaded image.</p>
+                </div>
+
+                <div>
+                    <b>3. Respond</b>
+                    <p>Emergency information is generated.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
