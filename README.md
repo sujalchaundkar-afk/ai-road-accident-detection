@@ -3,6 +3,10 @@
 ResQNet AI is an AI-powered web application designed to help detect possible road accidents from road scene images and provide quick emergency response information.
 
 The main idea is to reduce the time between accident detection and emergency assistance by using image analysis and automatically generating a simple safety report.
+## Live Demo
+
+https://ai-road-accident-detection.onrender.com
+
 
 ## 🎯 Problem
 
