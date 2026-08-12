@@ -3,22 +3,36 @@ import os
 
 app = Flask(__name__)
 
-# Folder where uploaded accident images will be stored
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 
+# Main page
 @app.route("/")
 def home():
     return send_from_directory(".", "index.html")
 
 
+# Serve CSS file
+@app.route("/style.css")
+def css():
+    return send_from_directory(".", "style.css")
+
+
+# Serve JavaScript file
+@app.route("/script.js")
+def javascript():
+    return send_from_directory(".", "script.js")
+
+
+# Analyze uploaded image
 @app.route("/analyze", methods=["POST"])
 def analyze():
+
     try:
-        # Get uploaded image
+
         if "image" not in request.files:
             return jsonify({
                 "success": False,
@@ -33,7 +47,6 @@ def analyze():
                 "message": "No image selected."
             })
 
-        # Save the image
         file_path = os.path.join(
             app.config["UPLOAD_FOLDER"],
             image.filename
@@ -41,8 +54,7 @@ def analyze():
 
         image.save(file_path)
 
-        # Prototype analysis
-        # This will be replaced with the actual AI model later
+        # Simple prototype analysis
         result = {
             "success": True,
             "accident_detected": True,
@@ -55,6 +67,7 @@ def analyze():
         return jsonify(result)
 
     except Exception as e:
+
         return jsonify({
             "success": False,
             "message": "Something went wrong.",
@@ -63,4 +76,4 @@ def analyze():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
